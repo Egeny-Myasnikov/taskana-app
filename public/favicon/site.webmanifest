@@ -1,0 +1,26 @@
+{
+	"name": "Taskana App",
+	"short_name": "Taskana",
+	"description": "Taskana — приложение для управления задачами.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#ffffff",
+	"icons": [
+		{
+			"src": "/favicon/favicon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png"
+		},
+		{
+			"src": "/favicon/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		},
+		{
+			"src": "/favicon/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}

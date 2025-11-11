@@ -1,0 +1,25 @@
+export const MinusIcon = ({
+	color = 'currentColor',
+	height = 24,
+	width = 24,
+	...props
+}) => {
+	return (
+		<svg
+			width={width}
+			height={height}
+			fill={color}
+			viewBox='0 0 24 24'
+			xmlns='http://www.w3.org/2000/svg'
+			aria-hidden='true'
+			{...props}
+		>
+			<path
+				fillRule='evenodd'
+				clipRule='evenodd'
+				d='M18.75 12C18.75 12.4142 18.4142 12.75 18 12.75L6 12.75C5.58579 12.75 5.25 12.4142 5.25 12C5.25 11.5858 5.58579 11.25 6 11.25L18 11.25C18.4142 11.25 18.75 11.5858 18.75 12Z'
+				fill={color}
+			/>
+		</svg>
+	)
+}

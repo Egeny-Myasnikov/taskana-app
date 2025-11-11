@@ -1,0 +1,11 @@
+.footer {
+	padding: 16px 24px;
+	background-color: var(--neutral-0);
+}
+.footerText {
+	font-weight: var(--font-weight-regular);
+	font-size: var(--body-md-font-size);
+	line-height: var(--body-md-line-height);
+	color: var(--neutral-600);
+	text-align: center;
+}

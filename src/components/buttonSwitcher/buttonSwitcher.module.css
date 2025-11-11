@@ -1,0 +1,54 @@
+.switcher {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	padding: 4px;
+	background-color: var(--base-800);
+	border-radius: var(--radius-default);
+	box-shadow: var(--shadow-base-default);
+
+	&:hover {
+		box-shadow: var(--shadow-base-hover);
+	}
+	&:focus-visible {
+		outline: 2px solid var(--base-white);
+		outline-offset: 2px;
+		box-shadow: var(--shadow-base-hover);
+	}
+}
+
+.switcherInput {
+	opacity: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	display: none;
+	transition: none;
+}
+.moonIcon,
+.sunIcon {
+	padding: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--base-primary-400);
+	border-radius: 4px;
+	box-shadow: var(--shadow-base-default);
+	color: var(--base-white);
+}
+
+.switcherInput:not(:checked) ~ .sunIcon,
+.switcherInput:checked ~ .moonIcon {
+	background-color: transparent;
+	box-shadow: none;
+	color: var(--base-600);
+}
+.switcher:focus-visible .switcherInput:checked ~ .sunIcon,
+.switcherInput:checked:hover ~ .sunIcon,
+.switcher:focus-visible .switcherInput:not(:checked) ~ .moonIcon,
+.switcherInput:not(:checked):hover ~ .moonIcon {
+	background-color: var(--base-white);
+	color: var(--base-900);
+}

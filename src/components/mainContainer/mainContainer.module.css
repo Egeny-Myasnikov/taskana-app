@@ -1,0 +1,15 @@
+.mainContainer {
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+.mainTitle {
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	padding: 24px;
+	background-color: var(--neutral-0);
+	font-size: var(--heading-h1-font-size);
+	line-height: var(--heading-h1-line-height);
+	font-weight: var(--font-weight-bold);
+}

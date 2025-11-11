@@ -1,0 +1,24 @@
+.statistic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+}
+.statisticText {
+	font-weight: var(--font-weight-regular);
+	font-size: var(--body-md-font-size);
+	line-height: var(--body-md-line-height);
+	text-align: center;
+}
+.statisticImg {
+	position: relative;
+	width: 231px;
+	height: 168px;
+}
+.statisticImg img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

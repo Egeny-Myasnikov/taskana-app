@@ -1,0 +1,12 @@
+.sideBar {
+	width: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-left: 1px solid var(--neutral-300);
+	background-color: var(--neutral-100);
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,144 @@
+:root {
+	/* COLORS */
+	/* neutral / light -- переопределяются в темной теме внизу */
+	--neutral-0: #ffffff;
+	--rgba-neutral-0: 255, 255, 255;
+	--neutral-100: #fbfbfb;
+	--neutral-200: #f3f3f3;
+	--neutral-300: #ececec;
+	--neutral-400: #bfbfbf;
+	--neutral-500: #8c8c8c;
+	--neutral-600: #6c6c6c;
+	--neutral-700: #393939;
+	--neutral-800: #1c1c1c;
+	--rgba-neutral-800: 28, 28, 28;
+	--neutral-900: #141414;
+
+	/* --primary / light -- переопределяются в темной теме внизу */
+	--primary-0: #fff4f4; /* Заливка приоритета 03 */
+	--primary-100: #ffcece; /* - */
+	--primary-200: #fca9a9; /* - */
+	--primary-300: #f25959; /* Pressed контролов, цвет бордеров */
+	--primary-400: #d51010; /* Основной цвет  */
+	--primary-500: #a60c0c; /* Ховер контролов, ховер бордеров */
+	--primary-600: #760909; /* - */
+
+	/* --secondary / light -- переопределяются в темной теме внизу */
+	--secondary-0: #f5f0ff; /* Заливка приоритета 02 */
+	--secondary-100: #eadfff; /* - */
+	--secondary-200: #d9c5ff; /* - */
+	--secondary-300: #b792ff; /* Цвет бордеров */
+	--secondary-400: #742cff; /* Основной цвет */
+	--secondary-500: #581bcc; /* Ховер бордеров */
+	/* --base neutral */
+	--base-white: #ffffff; /* Основной текст, бордер фокуса */
+	--base-white-rgba: 255, 255, 255; /* Основной текст, disable */
+	--base-600: #6c6c6c; /* Второстепенный текст */
+	--base-800: #262626; /* - */
+	--base-900: #141414; /* Инверсия текста, бордер фокуса */
+	--base-black: #000000; /* Фон хедера */
+
+	/* --base primary */
+	--base-primary-100: #ffcece; /* - */
+	--base-primary-300: #f25959; /* Pressed контролов */
+	--base-primary-400: #d51010; /* Основной цвет */
+	--base-primary-400-rgba: 213, 16, 16; /* disable */
+	--base-primary-500: #a60c0c; /* Ховер контролов */
+	--base-primary-400-500: linear-gradient(
+		180deg,
+		var(--base-primary-400),
+		var(--base-primary-500)
+	);
+
+	/* EFFECTS */
+	/* --shadows / light -- переопределяются в темной теме внизу */
+	--shadow-base-default: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	--shadow-base-hover: 2px 8px 12px rgba(0, 0, 0, 0.25);
+	--shadow-sm-default: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	--shadow-sm-hover: 2px 8px 12px rgba(0, 0, 0, 0.2);
+	/* --radius */
+	--radius-default: 8px;
+	/* --transition */
+	--transition-default: 0.2s ease-in-out;
+	--transition-slower: 0.4s ease-in-out;
+
+	/* SIZE */
+	--min-width-display: 1280px;
+
+	/* FONTS */
+	/* --font-family */
+	--font-family-primary: 'SourceSans3', sans-serif;
+	/* --font-weight */
+	--font-weight-regular: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	/* --heading-h1 */
+	--heading-h1-font-size: 32px;
+	--heading-h1-line-height: 40px;
+	/* --heading-h2 */
+	--heading-h2-font-size: 24px;
+	--heading-h2-line-height: 32px;
+	/* --heading-h3 */
+	--heading-h3-font-size: 18px;
+	--heading-h3-line-height: 24px;
+	/* --body-xl */
+	--body-xl-font-size: 20px;
+	--body-xl-line-height: 28px;
+	/* --body-lg */
+	--body-lg-font-size: 18px;
+	--body-lg-line-height: 24px;
+	/* --body-md */
+	--body-md-font-size: 16px;
+	--body-md-line-height: 24px;
+	/* --body-sm */
+	--body-sm-font-size: 14px;
+	--body-sm-line-height: 20px;
+	/* --body-xs */
+	--body-xs-font-size: 12px;
+	--body-xs-line-height: 16px;
+
+	/* ICONS */
+	/* --size */
+	--width-icon-default: 24px;
+	--height-icon-default: 24px;
+}
+
+[data-theme='dark'] {
+	/* COLORS */
+	/* --neutral / dark -- переопределяются в темной теме вверху */
+	--neutral-0: #141414;
+	--rgba-neutral-0: 20, 20, 20;
+	--neutral-100: #1c1c1c;
+	--neutral-200: #262626;
+	--neutral-300: #333333;
+	--neutral-400: #6c6c6c;
+	--neutral-500: #8c8c8c;
+	--neutral-600: #bfbfbf;
+	--neutral-700: #ececec;
+	--neutral-800: #fbfbfb;
+	--rgba-neutral-800: 251, 251, 251;
+	--neutral-900: #ffffff;
+
+	/* --primary / dark -- переопределяются в темной теме вверху */
+	--primary-0: #300b0b; /* Заливка приоритета 02 */
+	--primary-100: #461313; /* Ховер приоритета */
+	--primary-200: #760909; /* - */
+	--primary-300: #a60c0c; /* Цвет бордеров */
+	--primary-400: #d51010; /* Основной цвет  */
+	--primary-500: #f25959; /* Ховер бордеров */
+
+	/* --secondary / dark -- переопределяются в темной теме вверху */
+	--secondary-0: #261c3c; /* Заливка приоритета 02 */
+	--secondary-100: #441a96; /* - */
+	--secondary-200: #5500f8; /* - */
+	--secondary-300: #803eff; /* Цвет бордеров */
+	--secondary-400: #9d6aff; /* Основной цвет  */
+	--secondary-500: #b792ff; /* Ховер бордеров */
+
+	/* EFFECTS */
+	/* --shadows / dark -- переопределяются в темной теме вверху */
+	--shadow-base-default: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	--shadow-base-hover: 2px 8px 12px rgba(0, 0, 0, 0.8);
+	--shadow-sm-default: 2px 2px 4px rgba(0, 0, 0, 0.3);
+	--shadow-sm-hover: 2px 8px 12px rgba(0, 0, 0, 0.6);
+}

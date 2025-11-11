@@ -1,0 +1,12 @@
+.navBar {
+	width: 204px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-right: 1px solid var(--neutral-300);
+	background-color: var(--neutral-100);
+	padding: 24px 16px;
+}
+.navbarIconLink {
+	width: var(--width-icon-default);
+	height: var(--height-icon-default);
+}

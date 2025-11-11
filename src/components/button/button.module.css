@@ -1,0 +1,83 @@
+.button {
+	line-height: var(--body-md-line-height);
+	border-radius: var(--radius-default);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.button--base {
+	background-color: var(--base-primary-400);
+	color: var(--base-white);
+	font-size: var(--body-md-font-size);
+	font-weight: var(--font-weight-semibold);
+	padding: 8px 16px 8px 12px;
+	box-shadow: var(--shadow-base-default);
+	&:hover,
+	&:focus-visible {
+		background-color: var(--base-primary-500);
+		box-shadow: var(--shadow-base-hover);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--base-white);
+		outline-offset: 2px;
+	}
+
+	&:active {
+		background-color: var(--base-primary-300);
+		outline: none;
+	}
+	&:disabled {
+		color: rgba(var(--base-white-rgba), 0.5);
+		background-color: rgba(var(--base-primary-400-rgba), 0.5);
+		box-shadow: var(--shadow-base-default);
+		cursor: not-allowed;
+	}
+}
+
+.button--primary,
+.button--secondary {
+	background-color: var(--neutral-800);
+	color: var(--neutral-0);
+	font-size: var(--body-lg-font-size);
+	font-weight: var(--font-weight-semibold);
+	padding: 12px 16px;
+	box-shadow: var(--shadow-base-default);
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--neutral-700);
+		box-shadow: var(--shadow-base-hover);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--neutral-900);
+		outline-offset: 2px;
+	}
+
+	&:active {
+		background-color: var(--neutral-600);
+		outline: none;
+		box-shadow: none;
+	}
+	&:disabled {
+		color: rgba(var(--rgba-neutral-0), 0.5);
+		background-color: rgba(var(--rgba-neutral-800), 0.5);
+		box-shadow: var(--shadow-base-default);
+		cursor: not-allowed;
+	}
+}
+.button--secondary {
+	color: var(--neutral-800);
+	background-color: var(--neutral-200);
+	--neutral-700: var(--neutral-300);
+	--neutral-600: var(--neutral-100);
+	--shadow-base-default: var(--shadow-sm-default);
+	--shadow-base-hover: var(--shadow-sm-hover);
+	&:disabled {
+		color: rgba(var(--rgba-neutral-800), 0.5);
+		background-color: rgba(var(--rgba-neutral-200), 0.5);
+	}
+}

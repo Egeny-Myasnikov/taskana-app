@@ -1,0 +1,98 @@
+.checkBox {
+	padding: 18px 18px 18px 18px;
+	display: flex;
+	gap: 18px;
+	border-radius: var(--radius-default);
+	color: var(--neutral-800);
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+.checkBoxTitle {
+	width: 100%;
+	overflow-wrap: break-word;
+	overflow-x: hidden;
+}
+
+.checkBox:has(.checkBoxFieldNone:hover),
+.checkBox:has(.checkBoxFieldNone:focus-visible) {
+	background-color: var(--neutral-100);
+	box-shadow: var(--shadow-sm-default);
+}
+.checkBox:has(.checkBoxFieldNone:focus-visible) {
+	outline: 2px solid var(--neutral-900);
+	outline-offset: 2px;
+}
+
+.checkBoxFieldNone {
+	appearance: none;
+	height: 20px;
+	width: 20px;
+	opacity: 0;
+	position: relative;
+}
+
+.checkBoxField {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+	border: 1.5px solid var(--neutral-400);
+	color: var(--neutral-800);
+	outline: 4px solid transparent;
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		background-color: currentColor;
+	}
+	&::after {
+		transform: rotate(-20deg) translateY(-50%);
+	}
+	&::before {
+		transform: rotate(20deg) translateY(-50%);
+	}
+}
+
+.checkBoxFieldNone:hover + .checkBoxField,
+.checkBoxFieldNone:focus-visible + .checkBoxField {
+	border-color: var(--neutral-800);
+}
+
+.checkBoxFieldNone:focus-visible + .checkBoxField {
+	outline: 4px solid var(--neutral-400);
+}
+
+.checkBoxField.checkBoxFieldPriority--2 {
+	--neutral-400: var(--secondary-300);
+	--neutral-800: var(--secondary-500);
+
+	&:focus-visible {
+		outline-color: var(--secondary-100);
+	}
+}
+.checkBoxField.checkBoxFieldPriority--3 {
+	--neutral-400: var(--primary-300);
+	--neutral-800: var(--primary-500);
+
+	&:focus-visible {
+		outline-color: var(--primary-100);
+	}
+}
+
+.checkBoxFieldNone:checked + .checkBoxField {
+	&::after,
+	&::before {
+		width: 2px;
+		height: 70%;
+	}
+
+	&::after {
+		height: 100%;
+	}
+}

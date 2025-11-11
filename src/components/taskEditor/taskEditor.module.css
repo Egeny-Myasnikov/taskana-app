@@ -1,0 +1,138 @@
+.taskEditor {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
+	background: var(--neutral-100);
+	border-left: 1px solid var(--neutral-300);
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(100%);
+	transition: transform var(--transition-slower),
+		opacity var(--transition-slower), visibility var(--transition-slower);
+}
+.taskEditorOpen {
+	transform: translateX(0);
+	visibility: visible;
+	opacity: 1;
+	transition: transform var(--transition-slower),
+		opacity var(--transition-slower), visibility var(--transition-slower),
+		background-color var(--transition-default), color var(--transition-default),
+		box-shadow var(--transition-default),
+		outline-color var(--transition-default),
+		border-color var(--transition-default);
+}
+
+.taskEditorBody {
+	flex-grow: 1;
+	padding: 24px;
+	padding-top: 0;
+	overflow-y: auto;
+}
+
+.taskEditorHeader {
+	flex-grow: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	position: sticky;
+	top: 0;
+	padding: 24px 0px;
+	background-color: var(--neutral-100);
+}
+
+.taskEditorTitle {
+	color: var(--neutral-800);
+	font-size: var(--heading-h1-font-size);
+	line-height: var(--heading-h1-line-height);
+	font-weight: var(--font-weight-bold);
+}
+
+.taskEditorContent {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin-top: 4px;
+}
+
+.taskEditorPriorityGroup {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.taskEditorLabel {
+	color: var(--neutral-800);
+	font-size: var(--body-lg-font-size);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--body-lg-line-height);
+}
+.taskEditorPriorityOptions {
+	display: flex;
+	gap: 8px;
+}
+.taskEditorPriorityBtn {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px;
+	border-radius: var(--radius-default);
+
+	&:hover {
+		box-shadow: var(--shadow-sm-hover);
+	}
+	&:focus-visible {
+		box-shadow: var(--shadow-sm-hover);
+		outline: 2px solid var(--neutral-900);
+		outline-offset: 2px;
+	}
+}
+.taskEditorPriorityBtn--1 {
+	color: var(--neutral-600);
+	&:hover,
+	&:focus-visible {
+		background-color: var(--neutral-300);
+	}
+}
+
+.taskEditorPriorityBtn--2 {
+	color: var(--secondary-400);
+	&:hover,
+	&:focus-visible {
+		background-color: var(--secondary-100);
+	}
+}
+.taskEditorPriorityBtn--3 {
+	color: var(--primary-400);
+	&:hover,
+	&:focus-visible {
+		background-color: var(--primary-100);
+	}
+}
+.taskEditorPriorityBtnActive {
+	box-shadow: var(--shadow-sm-default);
+}
+.taskEditorPriorityBtn--1.taskEditorPriorityBtnActive {
+	background-color: var(--neutral-200);
+}
+.taskEditorPriorityBtn--2.taskEditorPriorityBtnActive {
+	background-color: var(--secondary-0);
+}
+.taskEditorPriorityBtn--3.taskEditorPriorityBtnActive {
+	background-color: var(--primary-0);
+}
+
+.taskEditorFooter {
+	flex-grow: 0;
+	padding: 16px 24px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 24px;
+	border-top: 1px solid var(--neutral-300);
+}
